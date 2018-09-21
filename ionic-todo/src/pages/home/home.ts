@@ -11,6 +11,7 @@ import { Data } from '../../providers/data/data';
 export class HomePage {
  
   public items = [];
+
  
   constructor(public navCtrl: NavController, public modalCtrl: ModalController, public dataService: Data) {
  
@@ -27,7 +28,15 @@ export class HomePage {
   ionViewDidLoad(){
  
   }
- 
+
+  delete(item) {
+    var index = this.items.indexOf(item, 0);
+    if (index > -1) {
+        this.items.splice(index, 1);
+        this.dataService.save(this.items);
+    }
+  }
+  
   addItem(){
  
     let addModal = this.modalCtrl.create(AddItemPage);
@@ -43,6 +52,7 @@ export class HomePage {
     addModal.present();
  
   }
+  
  
   saveItem(item){
     this.items.push(item);
@@ -54,5 +64,8 @@ export class HomePage {
       item: item
     });
   }
+
+  
+  
  
 }

@@ -9,7 +9,7 @@
     </ion-toolbar>
 </ion-header>
  
-<ion-content>
+<ion-content class="body">
   <ion-list>
  
     <ion-item>
@@ -21,7 +21,25 @@
       <ion-label floating>Description</ion-label>
       <ion-input type="text" [(ngModel)]="description"></ion-input>
     </ion-item>
- 
+
+    <ion-list radio-group [(ngModel)]="priority">
+        <h4 class="white">Task Priority:</h4>                    
+        <ion-item>
+            <ion-label>Low</ion-label>
+            <ion-radio value="Low Priority:"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Normal</ion-label>
+            <ion-radio value="Normal Priority:"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>High</ion-label>
+            <ion-radio value="High Priority"></ion-radio>
+        </ion-item>
+
+    </ion-list>
+    
+
   </ion-list>
  
   <button full ion-button color="secondary" (click)="saveItem()">Save</button>

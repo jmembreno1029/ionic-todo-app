@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { AddItemPage } from '../pages/add-item/add-item';
 import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { Data } from '../providers/data/data';
+// import { Data } from '../providers/data/data';
  
 @NgModule({
   declarations: [

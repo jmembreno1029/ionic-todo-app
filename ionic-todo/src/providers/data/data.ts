@@ -15,5 +15,7 @@ export class Data {
   save(data){
     this.storage.set('todos', data);
   }
+
+  
  
 }

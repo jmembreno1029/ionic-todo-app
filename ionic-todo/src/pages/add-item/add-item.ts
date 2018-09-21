@@ -6,19 +6,24 @@ import { NavController, ViewController } from 'ionic-angular';
   templateUrl: 'add-item.html'
 })
 export class AddItemPage {
- 
+  
   title: string;
   description: string;
+  priority: string;
  
   constructor(public navCtrl: NavController, public view: ViewController) {
  
   }
  
   saveItem(){
- 
+
     let newItem = {
+      
       title: this.title,
+      priority: this.priority,
       description: this.description
+      
+
     };
  
     this.view.dismiss(newItem);
